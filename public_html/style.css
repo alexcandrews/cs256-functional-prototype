@@ -1,0 +1,13 @@
+    .trashtalk-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #FFD740;
+    }
+
+     .trashtalk-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  
