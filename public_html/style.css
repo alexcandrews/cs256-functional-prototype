@@ -1,5 +1,5 @@
     .trashtalk-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid #FFD740;
+      border-bottom: 4px solid rgba(255, 215, 64, .5);
     }
 
      .trashtalk-search-box {
@@ -8,6 +8,23 @@
             order: 2;
     margin-left: 16px;
     margin-right: 16px;
+  }
+
+  .input-box {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .card-buttons {
+    padding: 5px 30px 10px 10px;
+  }
+
+  .card-buttons > div {
+    float: right;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .active {
+    border-bottom: 4px solid #FFD740;
   }
 
   
