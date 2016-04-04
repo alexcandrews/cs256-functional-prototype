@@ -19,7 +19,9 @@ Trash Talk
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">TrashTalk</span>
+      <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title" href="trashtalk.html">
+        TrashTalk
+      </a>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
           <div class="trashtalk-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
@@ -47,8 +49,10 @@ Trash Talk
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">TrashTalk</span>
-    <nav class="mdl-navigation">
+  <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title" href="trashtalk.html">
+    TrashTalk
+  </a>
+      <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="trashtalk.html"><b>Bins</b></a>
       <a class="mdl-navigation__link" href="login.html">Chart</a>
       <a class="mdl-navigation__link" href="signup.html">Routing</a>
@@ -61,6 +65,7 @@ Trash Talk
       <div class="generate-routes-title">
         <h4>Generate Today's Route(s)</h4>
       </div>
+      <center>
       <form action="routes-generated.html">
         <div id="center-fab">
           <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
@@ -68,33 +73,32 @@ Trash Talk
           </button>
         </div>
       </form>
+      </center>
      <!-- Two Line List with secondary info and action -->
-       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-        <tbody>
-          <div class="route-date">
-            <h6>Yesterday's Route(s)</h6>
-          </div>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
-          </tr>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 2: LSB, ESC, BNSN ...</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-       <div class="route-date">
+      <div class="past-routes">
+        <h6>Yesterday's Route(s)</h6>
+         <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+          <tbody>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
         <h6>April 3rd Route(s)</h6>
-       </div>
         <tbody>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
-          </tr>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 2: LSB, ESC, BNSN ...</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 5 Items</i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 </div>

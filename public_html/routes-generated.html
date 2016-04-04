@@ -19,7 +19,9 @@ Trash Talk
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">TrashTalk</span>
+      <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title" href="trashtalk.html">
+        TrashTalk
+      </a>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
           <div class="trashtalk-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
@@ -47,7 +49,9 @@ Trash Talk
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">TrashTalk</span>
+    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title" href="trashtalk.html">
+        TrashTalk
+    </a>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="trashtalk.html"><b>Bins</b></a>
       <a class="mdl-navigation__link" href="login.html">Chart</a>
@@ -62,21 +66,55 @@ Trash Talk
         <h4>Route(s) Generated</h4>
       </div>
      <!-- Two Line List with secondary info and action -->
+     <div class="past-routes">
+        <h6>Today's Route(s)</h6>
        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
         <tbody>
           <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
           </tr>
           <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 2: LSB, ESC, BNSN ...</td>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
           </tr>
         </tbody>
       </table>
-      <div id="center-fab">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-          Send Route(s) To Drivers
+      <div class="send-routes-fab">
+      <center>
+        <button id ="send-routes-fab" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Send To Drivers
         </button>
+        <button id="print-routes-fab"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          Print
+        </button>
+      </center>
       </div>
+      <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+      </div>
+      </div>
+      <script>
+      (function() {
+        'use strict';
+        var snackbarContainer = document.querySelector('#demo-toast-example');
+        var showToastButton = document.querySelector('#send-routes-fab');
+        showToastButton.addEventListener('click', function() {
+          'use strict';
+          var data = {message: 'Routes Sent'};
+          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        });
+      }());
+      (function() {
+        'use strict';
+        var snackbarContainer = document.querySelector('#demo-toast-example');
+        var showToastButton = document.querySelector('#print-routes-fab');
+        showToastButton.addEventListener('click', function() {
+          'use strict';
+          var data = {message: 'Routes Printed (no, really)'};
+          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        });
+      }());
+      </script>
     </div>
   </main>
 </div>
