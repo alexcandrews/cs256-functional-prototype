@@ -9,97 +9,96 @@
 
 
 <title>
-Trash Talk
+  Trash Talk
 </title>
 
 <body>
 
-    <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">TrashTalk</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-          <div class="trashtalk-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search-field">
-            </div>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">TrashTalk</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <div class="trashtalk-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
           </div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
-        <a class="mdl-navigation__link mdl-typography--text-uppercase active" href="signup.html">Sign Up</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="login.html">Login</a>
+        </div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase active" href="signup.html">Sign Up</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">TrashTalk</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="trashtalk.html">Home</a>
+        <a class="mdl-navigation__link" href="login.html">Login</a>
+        <a class="mdl-navigation__link" href="signup.html"><b>Sign Up</b></a>
+        <a class="mdl-navigation__link" href="">Contact Us</a>
       </nav>
     </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">TrashTalk</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="trashtalk.html">Home</a>
-      <a class="mdl-navigation__link" href="login.html">Login</a>
-      <a class="mdl-navigation__link" href="signup.html"><b>Sign Up</b></a>
-      <a class="mdl-navigation__link" href="">Contact Us</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col"><!-- This is just for spacing --></div>
-        <div class="mdl-cell mdl-cell--4-col">
-          <div class="mdl-card mdl-shadow--4dp">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">Sign Up</h2>
-            </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
 
-            <div class="input-box" id="username-input">
-              <form action="#">
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input class="mdl-textfield__input" type="text" id="username">
-                  <label class="mdl-textfield__label" for="sample1">email</label>
-                </div>
-              </form>
-            </div>
-
-            <div class="input-box" id="password-input">
-              <form action="#">
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input class="mdl-textfield__input" type="text" id="username-input">
-                  <label class="mdl-textfield__label" for="sample1">password</label>
-                </div>
-              </form>
-            </div>
-
-            <div class="input-box" id="confirm-password-input">
-              <form action="#">
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input class="mdl-textfield__input" type="text" id="username-input">
-                  <label class="mdl-textfield__label" for="sample1">confirm password</label>
-                </div>
-              </form>
-            </div>
-
-            <div class="card-buttons">
-              <div>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Sign Up</button>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col">
+            <!-- This is just for spacing -->
+          </div>
+          <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--4dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Sign Up</h2>
               </div>
-              
-              <div>
-                <button class="mdl-button mdl-js-button">Cancel</button>
-              </div>
+
+
+              <form action="trashtalk.html">
+                <div class="input-box" id="username-input">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="username">
+                    <label class="mdl-textfield__label" for="sample1">username</label>
+                  </div>
+                </div>
+
+                <div class="input-box" id="password-input">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="password" id="username-input">
+                    <label class="mdl-textfield__label" for="sample1">password</label>
+                  </div>
+                </div>
+
+                <div class="input-box" id="confirm-password-input">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="password" id="username-input">
+                    <label class="mdl-textfield__label" for="sample1">confirm password</label>
+                  </div>
+                </div>
+
+                <div class="card-buttons">
+                  <div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Sign Up</button>
+                  </div>
+
+                  <div>
+                    <button class="mdl-button mdl-js-button">Cancel</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
+
       </div>
-    
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
 
 </body>
 
