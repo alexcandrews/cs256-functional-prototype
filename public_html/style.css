@@ -16,6 +16,7 @@
 
   .card-buttons {
     padding: 5px 30px 10px 10px;
+    position: relative; 
   }
 
   .card-buttons > div {
@@ -31,7 +32,17 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1000;
     border-collapse: collapse;
-    padding: 40px 40px 40px 40px;
+    padding: 30px 30px 30px 30px;
+  }
+
+  .home-link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .map-container {
+    margin: 0 40px 20px 40px;
+    overflow: hidden;
   }
