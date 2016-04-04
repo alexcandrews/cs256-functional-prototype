@@ -1,3 +1,6 @@
+    body {
+      background: #F2F2F2;
+    }
     .trashtalk-navigation .mdl-navigation__link:hover {
       border-bottom: 4px solid rgba(255, 215, 64, .5);
     }
@@ -35,10 +38,19 @@
     border-collapse: collapse;
     padding: 40px 40px 40px 40px;
   }
+  #center-fab {
+    width:3%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .generate-routes-title {
     text-align: center;
   }
   .routes-table {
-    margin: auto; 
+    margin: auto;
+    width: 70%; 
+  }
+  .route-date {
+    text-align: center;
   }

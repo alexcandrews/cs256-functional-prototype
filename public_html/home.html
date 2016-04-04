@@ -31,19 +31,29 @@ Trash Talk
             </div>
           </div>
       <!-- Navigation. We hide it in small screens. -->
+       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="signup.html">Sign Up</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="login.html">Login</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bins.html" id="bins-tab">Bins</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html" id="chart-tab">Chart</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="routing.html" id="routing-tab">Routing</a>
+
+
+        <!--  ToolTips  -->
+        <span class="mdl-tooltip trashtalk-tooltip" for="bins-tab">Click to see a map view of all of your active bins.</span>
+        <span class="mdl-tooltip trashtalk-tooltip" for="chart-tab">Click to see and analyze a chart of data for individual bins</span>
+        <span class="mdl-tooltip trashtalk-tooltip" for="routing-tab">Click to see, adjust, and calculate efficient routes for collection.</span>
+
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">TrashTalk</span>
     <nav class="mdl-navigation">
-<a class="mdl-navigation__link" href="trashtalk.html"><b>Home</b></a>
-      <a class="mdl-navigation__link" href="login.html">Login</a>
-      <a class="mdl-navigation__link" href="signup.html">Sign Up</a>
-      <a class="mdl-navigation__link" href="">Contact Us</a>
+      <a class="mdl-navigation__link" href="trashtalk.html"><b>Bins</b></a>
+      <a class="mdl-navigation__link" href="login.html">Chart</a>
+      <a class="mdl-navigation__link" href="signup.html">Routing</a>
+      <a class="mdl-navigation__link" href="">Settings</a>
+      <a class="mdl-navigation__link" href="">Logout</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -51,12 +61,19 @@ Trash Talk
       <div class="generate-routes-title">
         <h4>Generate Today's Route(s)</h4>
       </div>
+      <div id="center-fab">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
      <!-- Two Line List with secondary info and action -->
        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-       <p>Yesterday's Route(s)</p>
         <tbody>
+          <div class="route-date">
+            <h6>Yesterday's Route(s)</h6>
+          </div>
           <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ..</td>
+            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
           </tr>
           <tr>
             <td class="mdl-data-table__cell--non-numeric">Route 2: LSB, ESC, BNSN ...</td>
@@ -64,10 +81,12 @@ Trash Talk
         </tbody>
       </table>
       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-       <p>Yesterday's Route(s)</p>
+       <div class="route-date">
+        <h6>April 3rd Route(s)</h6>
+       </div>
         <tbody>
           <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ..</td>
+            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
           </tr>
           <tr>
             <td class="mdl-data-table__cell--non-numeric">Route 2: LSB, ESC, BNSN ...</td>
