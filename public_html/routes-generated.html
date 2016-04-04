@@ -59,21 +59,11 @@ Trash Talk
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
       <div class="generate-routes-title">
-        <h4>Generate Today's Route(s)</h4>
+        <h4>Route(s) Generated</h4>
       </div>
-      <form action="routes-generated.html">
-        <div id="center-fab">
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-            <i class="material-icons">add</i>
-          </button>
-        </div>
-      </form>
      <!-- Two Line List with secondary info and action -->
        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
         <tbody>
-          <div class="route-date">
-            <h6>Yesterday's Route(s)</h6>
-          </div>
           <tr>
             <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
           </tr>
@@ -82,19 +72,11 @@ Trash Talk
           </tr>
         </tbody>
       </table>
-      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-       <div class="route-date">
-        <h6>April 3rd Route(s)</h6>
-       </div>
-        <tbody>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 1: JFSB, TMCB, HC, JKB ...</td>
-          </tr>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric">Route 2: LSB, ESC, BNSN ...</td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="center-fab">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Send Route(s) To Drivers
+        </button>
+      </div>
     </div>
   </main>
 </div>
