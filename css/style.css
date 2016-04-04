@@ -1,18 +1,44 @@
-  .trashtalk-navigation-container {
-    /* Simple hack to make the overflow happen to the left instead... */
-    direction: rtl;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 500px;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    .trashtalk-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid rgba(255, 215, 64, .5);
+    }
+
+     .trashtalk-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
   }
- .trashtalk-navigation {
-    /* ... and now make sure the content is actually LTR */
-    direction: ltr;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 800px;
+
+  .input-box {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .card-buttons {
+    padding: 5px 30px 10px 10px;
+  }
+
+  .card-buttons > div {
+    float: right;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .active {
+    border-bottom: 4px solid #FFD740;
+  }
+
+  #fab {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-collapse: collapse;
+    padding: 40px 40px 40px 40px;
+  }
+
+  .generate-routes-title {
+    text-align: center;
+  }
+  .routes-table {
+    margin: auto; 
   }
