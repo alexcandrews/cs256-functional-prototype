@@ -26,3 +26,12 @@
   .active {
     border-bottom: 4px solid #FFD740;
   }
+
+  #fab {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-collapse: collapse;
+    padding: 40px 40px 40px 40px;
+  }
