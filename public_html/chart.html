@@ -72,7 +72,7 @@
             <table class="sortable mdl-data-table mdl-js-data-table mdl-shadow--2dp routes-table">
               <thead>
                 <tr>
-                  <th class="mdl-data-table__cell--non-numeric">Site</th>
+                  <th class="mdl-data-table__cell--non-numeric" id="clickme-onload">Site</th>
                   <th>Number of Bins</th>
                   <th>Last Picked Up</th>
                   <th>% Full When Picked Up</th>
@@ -83,21 +83,21 @@
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">JFSB</td>
                   <td>6</td>
-                  <td>4 Days Ago</td>
+                  <td sorttable_customkey="20160331120000">4 Days Ago</td>
                   <td>75 %</td>
                   <td>63 %</td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">LSB</td>
                   <td>5</td>
-                  <td>3 Hours Ago</td>
+                  <td sorttable_customkey="20160404180000">3 Hours Ago</td>
                   <td>95 %</td>
                   <td>43 %</td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">HBLL</td>
                   <td>10</td>
-                  <td>9 Hours Ago</td>
+                  <td sorttable_customkey="20160404090000">9 Hours Ago</td>
                   <td>80 %</td>
                   <td>20 %</td>
                 </tr>
@@ -108,6 +108,17 @@
       </main>
     </div>
   </body>
+  <script>
+    // Wait 100 milliseconds (for the sorting script to finish adding event handlers)
+    // and then simulate clicking the first column head so it's sorted, that way the user
+    // is aware that it's possible to click the columns to sort them because the arrow
+    // will be there
+    setTimeout(function() {
+        var event = document.createEvent('HTMLEvents');
+        event.initEvent('click', true, false);
+        document.getElementById("clickme-onload").dispatchEvent(event);
+    }, 100);
+  </script>
 
 </html>
 
