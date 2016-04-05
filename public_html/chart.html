@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <!-- Material Design Library -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css"
+  />
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Trash Talk</title>
+  
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title"
+          href="home.html">
+        TrashTalk
+      </a>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <div class="trashtalk-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
+          <!-- Navigation. We hide it in small screens. -->
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bins.html"
+            id="bins-tab">Bins</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html"
+            id="chart-tab">Chart</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="routing.html"
+            id="routing-tab">Routing</a>
+            <!-- ToolTips -->
+            <span class="mdl-tooltip trashtalk-tooltip" for="bins-tab">Click to see a map view of all of your active bins.</span>
+            <span class="mdl-tooltip trashtalk-tooltip"
+            for="chart-tab">Click to see and analyze a chart of data for individual bins</span>
+            <span
+            class="mdl-tooltip trashtalk-tooltip" for="routing-tab">Click to see, adjust, and calculate efficient routes for collection.</span>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title">
+        TrashTalk
+    </a>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="bins.html"><b>Bins</b></a>
+          <a class="mdl-navigation__link" href="chart.html">Chart</a>
+          <a class="mdl-navigation__link" href="home.html">Routing</a>
+          <a class="mdl-navigation__link" href="">Settings</a>
+          <a class="mdl-navigation__link" href="">Logout</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric">Material</th>
+                <th>Quantity</th>
+                <th>Unit price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                <td>25</td>
+                <td>$2.90</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                <td>50</td>
+                <td>$1.25</td>
+              </tr>
+              <tr>
+                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                <td>10</td>
+                <td>$2.35</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+
+</html>
+
