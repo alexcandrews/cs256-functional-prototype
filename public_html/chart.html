@@ -72,7 +72,7 @@
             <table class="sortable mdl-data-table mdl-js-data-table mdl-shadow--2dp routes-table">
               <thead>
                 <tr>
-                  <th class="mdl-data-table__cell--non-numeric" id="clickme-onload">Site</th>
+                  <th class="mdl-data-table__cell--non-numeric" id="sort-on-load">Site</th>
                   <th>Number of Bins</th>
                   <th>Last Picked Up</th>
                   <th>% Full When Picked Up</th>
@@ -109,15 +109,12 @@
     </div>
   </body>
   <script>
-    // Wait 100 milliseconds (for the sorting script to finish adding event handlers)
-    // and then simulate clicking the first column head so it's sorted, that way the user
-    // is aware that it's possible to click the columns to sort them because the arrow
-    // will be there
+    // Wait 80 milliseconds ( for everything to initialize ) and sort by the first
+    //column so it's already sorted, that way the user is aware that it's possible
+    //to click the columns to sort them because the arrow will be there
     setTimeout(function() {
-        var event = document.createEvent('HTMLEvents');
-        event.initEvent('click', true, false);
-        document.getElementById("clickme-onload").dispatchEvent(event);
-    }, 100);
+        sorttable.innerSortFunction.apply(document.getElementById("sort-on-load"), []);
+    }, 80);
   </script>
 
 </html>
