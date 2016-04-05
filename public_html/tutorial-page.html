@@ -63,43 +63,58 @@ Trash Talk
     <div class="page-content">
     <!-- stuff goes here -->
 
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-
-        <div class="map-container" style="overflow:hidden;position:relative;">
-          <div style='overflow:hidden;height:100%;width:100%;'>
-            <div id='gmap_canvas' style='height:100%;width:100%;'>
-            </div>
-            <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-          </div> 
-          <a href='https://www.embed-map.net/'>google maps embed</a> 
-
-          <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=a248276187a537a3ac0a94c83005ee16f74f91ca'></script>
-          <script type='text/javascript'>
-            function init_map(){
-              var myOptions = {
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+          function initialize() {
+            var mapProp = {
+              center:new google.maps.LatLng(40.250592, -111.649640),
               zoom:14,
-              center:new google.maps.LatLng(40.279350724718,-111.62530732180177),
-              mapTypeId: google.maps.MapTypeId.ROADMAP};
-              map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-              marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.279350724718,-111.62530732180177)});
-              infowindow = new google.maps.InfoWindow({content:'<strong>JFSB South`</strong><br>South Campus Drive<br>84602 Provo<br>'});
-              google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-          </script>
+              mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+
+        <div class="map-container">
+          <div id="googleMap" style="width:1200px;height:650px;"></div>
         </div>
       
         <div id="fab">
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-              <i class="material-icons">add</i>
-            </button>
+          <div class="dropdown">
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
           </div>
 
+          <button onclick="myFunction()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored dropbtn">
+            <i class="material-icons">add</i>
+          </button>
+        </div>
 
+        <script>
+          /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+          }
 
-
-
-
-
-
+          // Close the dropdown menu if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+        </script>
 
 
     </div>
