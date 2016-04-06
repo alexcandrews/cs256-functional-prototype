@@ -2,6 +2,7 @@
 <html>
 
 <!-- Material Design Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css" />
 <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
@@ -61,7 +62,7 @@ Trash Talk
 
   <main class="mdl-layout__content">
     <div class="page-content">
-    <!-- stuff goes here -->
+    <!-- stuff goes here
 
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
@@ -75,6 +76,7 @@ Trash Talk
           }
           google.maps.event.addDomListener(window, 'load', initialize);
       </script>
+      -->
 
         <div class="map-container">
           <div id="googleMap" style="width:1200px;height:650px;"></div>
@@ -83,15 +85,49 @@ Trash Talk
         <div id="fab">
           <div class="dropdown">
             <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <button onclick="newDumpster()" class="dropdown-button" id="add-dumpster-button">Add Dumpster</button>
+              <button onclick="" class="dropdown-button" id="create-routes-button">Generate Routes</button>
+              <button onclick="" class="dropdown-button" id="third-option-button">Third Option</button>
             </div>
           </div>
 
           <button onclick="myFunction()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored dropbtn">
             <i class="material-icons">add</i>
           </button>
+        </div>
+
+        <div class="dialogue">
+          <div id="new-dumpster" class="mdl-card mdl-shadow--4dp card">
+            <div class="mdl-card__title card-header">
+              <h2 class="mdl-card__title-text">New Dumpster</h2>
+            </div>
+
+            <form class="input-form">
+              <div class="input-box" id="username-input">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="username">
+                  <label class="mdl-textfield__label" for="sample1">name</label>
+                </div>
+              </div>
+
+              <div class="input-box" id="password-input">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="username-input">
+                  <label class="mdl-textfield__label" for="sample1">location</label>
+                </div>
+              </div>
+
+              <div class="card-buttons">
+                <div>
+                  <button class="mdl-button mdl-js-button">Add</button>
+                </div>
+
+                <div>
+                  <button class="mdl-button mdl-js-button">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
 
         <script>
@@ -114,6 +150,14 @@ Trash Talk
               }
             }
           }
+
+          /* New Dumpster window */
+          $document.ready(funtion() {
+            $("#add-dumpster-button").click(function() {
+              $(".dialogue").show();
+            }
+
+
         </script>
 
 
