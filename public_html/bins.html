@@ -61,7 +61,7 @@ Trash Talk
 
   <main class="mdl-layout__content">
     <div class="page-content">
-    <!-- stuff goes here
+    <!-- stuff goes here-->
 
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
@@ -75,7 +75,7 @@ Trash Talk
           }
           google.maps.event.addDomListener(window, 'load', initialize);
       </script>
-      -->
+      
 
         <div class="map-container">
           <div id="googleMap" style="width:1200px;height:650px;"></div>
@@ -118,7 +118,7 @@ Trash Talk
 
               <div class="card-buttons">
                 <div>
-                  <button onclick="buttonClicked()" class="mdl-button mdl-js-button">Add</button>
+                  <button onclick="buttonClicked()" id="commit-dumpster-add" class="mdl-button mdl-js-button">Add</button>
                 </div>
 
                 <div>
@@ -160,7 +160,33 @@ Trash Talk
 
         </script>
 
-
+        <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+          <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+          </div>
+        </div>
+        <script>
+          (function() {
+            'use strict';
+            var snackbarContainer = document.querySelector('#demo-toast-example');
+            var showToastButton = document.querySelector('#commit-dumpster-add');
+            showToastButton.addEventListener('click', function() {
+              'use strict';
+              var data = {message: 'Dumpster Added'};
+              snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            });
+          }());
+          (function() {
+            'use strict';
+            var snackbarContainer = document.querySelector('#demo-toast-example');
+            var showToastButton = document.querySelector('#create-routes-button');
+            showToastButton.addEventListener('click', function() {
+              'use strict';
+              var data = {message: 'Routes Generated'};
+              snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            });
+          }());
+        </script>
     </div>
   </main>
 </div>
