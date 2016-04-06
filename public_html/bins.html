@@ -34,7 +34,7 @@ Trash Talk
           </div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bins.html" id="bins-tab">Bins</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase active" href="bins.html" id="bins-tab">Bins</a>
         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html" id="chart-tab">Chart</a>
         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="routing.html" id="routing-tab">Routing</a>
 
@@ -51,7 +51,7 @@ Trash Talk
     TrashTalk
   </a>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="bins.html"><b>Bins</b></a>
+      <a class="mdl-navigation__link active" href="bins.html"><b>Bins</b></a>
       <a class="mdl-navigation__link" href="chart.html">Chart</a>
       <a class="mdl-navigation__link" href="home.html">Routing</a>
       <a class="mdl-navigation__link" href="">Settings</a>
@@ -65,13 +65,29 @@ Trash Talk
 
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
+          var myCenter = new google.maps.LatLng(40.250592, -111.649640);
           function initialize() {
             var mapProp = {
-              center:new google.maps.LatLng(40.250592, -111.649640),
+              center:myCenter,
               zoom:14,
               mapTypeId:google.maps.MapTypeId.ROADMAP
             };
             var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            //added elements to the map (marker, info-window)
+            var marker=new google.maps.Marker({
+              position:myCenter,
+            });
+
+            marker.setMap(map);
+
+            var infowindow = new google.maps.InfoWindow({
+              content:"ESC Dumpster"
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.open(map,marker);
+            });
           }
           google.maps.event.addDomListener(window, 'load', initialize);
       </script>
