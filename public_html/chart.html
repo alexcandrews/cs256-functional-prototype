@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css"
     />
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="../js/sorttable.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <title>Trash Talk</title>
   </head>
@@ -58,40 +59,69 @@
           <a class="mdl-navigation__link" href="chart.html">Chart</a>
           <a class="mdl-navigation__link" href="home.html">Routing</a>
           <a class="mdl-navigation__link" href="">Settings</a>
-          <a class="mdl-navigation__link" href="">Logout</a>
+          <a class="mdl-navigation__link" href="login.html">Logout</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
         <div class="page-content">
           <!-- Your content goes here -->
           <div class="generate-routes-title">
-            <h4>Route(s) Generated</h4>
+            <h4>Sites</h4>
           </div>
           <div class="past-routes">
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+            <table class="sortable mdl-data-table mdl-js-data-table mdl-shadow--2dp routes-table">
               <thead>
                 <tr>
-                  <th class="mdl-data-table__cell--non-numeric">Material</th>
-                  <th>Quantity</th>
-                  <th>Unit price</th>
+                  <th class="mdl-data-table__cell--non-numeric" id="sort-on-load">Site</th>
+                  <th>Number of Bins</th>
+                  <th>Last Picked Up</th>
+                  <th>% Full When Picked Up</th>
+                  <th>% Full Now</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                  <td>25</td>
-                  <td>$2.90</td>
+                  <td class="mdl-data-table__cell--non-numeric">JFSB</td>
+                  <td>2</td>
+                  <td sorttable_customkey="20160405120000">1 Hour Ago</td>
+                  <td>80 %</td>
+                  <td>1 %</td>
                 </tr>
                 <tr>
-                  <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-                  <td>50</td>
-                  <td>$1.25</td>
+                  <td class="mdl-data-table__cell--non-numeric">LSB</td>
+                  <td>3</td>
+                  <td sorttable_customkey="20160405180000">3 Hours Ago</td>
+                  <td>95 %</td>
+                  <td>5 %</td>
                 </tr>
                 <tr>
-                  <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-                  <td>10</td>
-                  <td>$2.35</td>
+                  <td class="mdl-data-table__cell--non-numeric">HBLL</td>
+                  <td>5</td>
+                  <td sorttable_customkey="20160404090000">9 Hours Ago</td>
+                  <td>80 %</td>
+                  <td>4 %</td>
                 </tr>
+		<tr>
+		  <td class="mdl-data-table__cell--non-numeric">TMCB</td>
+		  <td>3</td>
+		  <td sorttable_customkey="20160405120000">2 Hours Ago</td>
+		  <td>80 %</td>
+		  <td>2 %</td>
+		</tr>
+		<tr>
+		  <td class="mdl-data-table__cell--non-numeric">WILK</td>
+		  <td>5</td>
+		  <td sorttable_customkey="20160331120000">1 Day Ago</td>
+		  <td>90 %</td>
+		  <td>90 %</td>
+		</tr>
+		<tr>
+		  <td class="mdl-data-table__cell--non-numeric">ESC</td>
+		  <td>6</td>
+		  <td sorttable_customkey="20160331120000">5 Hours Ago</td>
+		  <td>60 %</td>
+		  <td>2 %</td>
+		</tr>
               </tbody>
             </table>
           </div>
@@ -99,6 +129,14 @@
       </main>
     </div>
   </body>
+  <script>
+    // Wait 80 milliseconds ( for everything to initialize ) and sort by the first
+    //column so it's already sorted, that way the user is aware that it's possible
+    //to click the columns to sort them because the arrow will be there
+    setTimeout(function() {
+        sorttable.innerSortFunction.apply(document.getElementById("sort-on-load"), []);
+    }, 80);
+  </script>
 
 </html>
 
