@@ -37,7 +37,7 @@ Trash Talk
       <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bins.html" id="bins-tab">Bins</a>
         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html" id="chart-tab">Chart</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="routing.html" id="routing-tab">Routing</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase active" href="routing.html" id="routing-tab">Routing</a>
 
 
         <!--  ToolTips  -->
@@ -88,6 +88,39 @@ Trash Talk
         </button>
       </center>
       </div>
+      <h6>Yesterday's Route(s)</h6>
+       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+        <tbody>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+      <h6>This Weeks Route(s)</h6>
+      <tbody>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 5 Items</i></td>
+          </tr>
+      </tbody>
       <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
         <div class="mdl-snackbar__text"></div>
         <button class="mdl-snackbar__action" type="button"></button>
@@ -100,7 +133,7 @@ Trash Talk
         var showToastButton = document.querySelector('#send-routes-fab');
         showToastButton.addEventListener('click', function() {
           'use strict';
-          var data = {message: 'Routes Sent'};
+          var data = {message: 'Routes Sent to Drivers', timeout: 1000};
           snackbarContainer.MaterialSnackbar.showSnackbar(data);
         });
       }());
@@ -110,7 +143,7 @@ Trash Talk
         var showToastButton = document.querySelector('#print-routes-fab');
         showToastButton.addEventListener('click', function() {
           'use strict';
-          var data = {message: 'Routes Printed (no, really)'};
+          var data = {message: 'Routes Printing . . .', timeout: 1000};
           snackbarContainer.MaterialSnackbar.showSnackbar(data);
         });
       }());
