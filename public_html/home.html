@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Material Design Library -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css" />
-<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-<link rel="stylesheet" href="../css/style.css">
-
-
-<title>
-  Trash Talk
-</title>
-
-<body>
-
+  <!-- Material Design Library -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css"
+  />
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Trash Talk</title>
+  
+  <body>
     <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title" href="home.html">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title"
+          href="home.html">
         TrashTalk
       </a>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
           <div class="trashtalk-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
               <i class="material-icons">search</i>
@@ -32,39 +28,42 @@
               <input class="mdl-textfield__input" type="text" id="search-field">
             </div>
           </div>
-       <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bins.html" id="bins-tab">Bins</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html" id="chart-tab">Chart</a>
-        <a class="mdl-navigation__link mdl-typography--text-uppercase active" href="home.html" id="routing-tab">Routing</a>
-
-
-        <!--  ToolTips  -->
-        <span class="mdl-tooltip trashtalk-tooltip" for="bins-tab">View all your active bins.</span>
-        <span class="mdl-tooltip trashtalk-tooltip" for="chart-tab">Analyze a chart of data for individual bins</span>
-        <span class="mdl-tooltip trashtalk-tooltip" for="routing-tab">Adjust, and calculate efficient routes for collection.</span>
-
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-  <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title">
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only trashtalk-navigation">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="bins.html"
+            id="bins-tab">Bins</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html"
+            id="chart-tab">Chart</a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase active"
+            href="home.html" id="routing-tab">Routing</a>
+            <!-- ToolTips -->
+            <span class="mdl-tooltip trashtalk-tooltip" for="bins-tab">View all your active bins.</span>
+            <span class="mdl-tooltip trashtalk-tooltip"
+            for="chart-tab">Analyze a chart of data for individual bins</span>
+            <span class="mdl-tooltip trashtalk-tooltip"
+            for="routing-tab">Adjust, and calculate efficient routes for collection.</span>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-layout-title">
     TrashTalk
   </a>
-      <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="bins.html">Bins</a>
-      <a class="mdl-navigation__link" href="chart.html">Chart</a>
-      <a class="mdl-navigation__link" href="home.html"><b>Routing</b></a>
-      <a class="mdl-navigation__link" href="">Settings</a>
-      <a class="mdl-navigation__link" href="login.html">Logout</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here -->
-      <!-- <div class="generate-routes-title">
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="bins.html">Bins</a>
+          <a class="mdl-navigation__link" href="chart.html">Chart</a>
+          <a class="mdl-navigation__link" href="home.html"><b>Routing</b></a>
+          <a class="mdl-navigation__link" href="">Settings</a>
+          <a class="mdl-navigation__link" href="login.html">Logout</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <!-- <div class="generate-routes-title">
         <h4>Generate Today's Route(s)</h4>
       </div> -->
-      <!-- <center>
+          <!-- <center>
       <form action="routes-generated.html">
         <div id="center-fab">
           <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
@@ -73,49 +72,99 @@
         </div>
       </form>
       </center> -->
-     <!-- Two Line List with secondary info and action -->
-      <div class="past-routes">
-        <h6>Today's Route(s)</h6>
-         <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-          <tbody>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
-            </tr>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
-            </tr>
-          </tbody>
-        </table>
-        <h6>Yesterday's Route(s)</h6>
-         <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-          <tbody>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
-            </tr>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-        <h6>This Weeks Route(s)</h6>
-        <tbody>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
-            </tr>
-            <tr>
-              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 5 Items</i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <!-- Two Line List with secondary info and action -->
+          <div class="past-routes">
+            <h6>Today's Route(s)</h6>
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ...
+                    <i>11 Items</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ...
+                    <i>7 Items</i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h6>Yesterday's Route(s)</h6>
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ...
+                    <i>11 Items</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ...
+                    <i>7 Items</i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+              <h6>This Weeks Route(s)</h6>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ...
+                    <i>8 Items</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ...
+                    <i>5 Items</i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="fab">
+          <div class="dropdown">
+            <div id="myDropdown" class="dropdown-content">
+              <button onclick="addDumpster()" class="dropdown-button" id="add-dumpster-button">Add Dumpster</button>
+              <button onclick="" class="dropdown-button" id="create-routes-button">Generate Routes</button>
+              <button onclick="" class="dropdown-button" id="third-option-button">Third Option</button>
+            </div>
+          </div>
+          <button onclick="myFunction()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored dropbtn">
+            <i class="material-icons">add</i>
+          </button>
+        </div>
     </div>
-  </main>
-  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-route">
-    <i class="material-icons">add</i>
-  </button>
-</div>
+    </main>
+  </body>
+  <script>
+    /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-</body>
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    function addDumpster() {
+        document.getElementById("new-dumpster").classList.toggle("visible");
+    }
+
+    function buttonClicked() {
+        document.getElementById("new-dumpster").classList.toggle("visible");
+    }
+  </script>
 
 </html>
+
