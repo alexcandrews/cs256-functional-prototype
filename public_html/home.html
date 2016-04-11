@@ -61,10 +61,10 @@
   </div>
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
-      <div class="generate-routes-title">
+      <!-- <div class="generate-routes-title">
         <h4>Generate Today's Route(s)</h4>
-      </div>
-      <center>
+      </div> -->
+      <!-- <center>
       <form action="routes-generated.html">
         <div id="center-fab">
           <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
@@ -72,9 +72,20 @@
           </button>
         </div>
       </form>
-      </center>
+      </center> -->
      <!-- Two Line List with secondary info and action -->
       <div class="past-routes">
+        <h6>Today's Route(s)</h6>
+         <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+          <tbody>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
+            </tr>
+          </tbody>
+        </table>
         <h6>Yesterday's Route(s)</h6>
          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
           <tbody>
@@ -100,6 +111,9 @@
       </div>
     </div>
   </main>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-route">
+    <i class="material-icons">add</i>
+  </button>
 </div>
 
 </body>
