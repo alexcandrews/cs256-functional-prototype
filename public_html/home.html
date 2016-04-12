@@ -35,7 +35,7 @@
             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="chart.html"
             id="chart-tab">Chart</a>
             <a class="mdl-navigation__link mdl-typography--text-uppercase active"
-            href="home.html" id="routing-tab">Routing</a>
+            href="routes-generated.html" id="routing-tab">Routing</a>
             <!-- ToolTips -->
             <span class="mdl-tooltip trashtalk-tooltip" for="bins-tab">View all your active bins.</span>
             <span class="mdl-tooltip trashtalk-tooltip"
@@ -52,7 +52,7 @@
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="bins.html">Bins</a>
           <a class="mdl-navigation__link" href="chart.html">Chart</a>
-          <a class="mdl-navigation__link" href="home.html"><b>Routing</b></a>
+          <a class="mdl-navigation__link" href="routes-generated.html"><b>Routing</b></a>
           <a class="mdl-navigation__link" href="">Settings</a>
           <a class="mdl-navigation__link" href="login.html">Logout</a>
         </nav>
@@ -73,7 +73,19 @@
       </form>
       </center> -->
           <!-- Two Line List with secondary info and action -->
-          <div class="past-routes">
+          <center><img src="icon.png" alt="icon" style="width:256px;height:256px;"></center>
+              <div class = "logo">
+                   <h5> We do garbage and efficiency and stuff!</h5>
+            </div>
+              <form action="routes-generated.html">
+                  <div class="card-buttons">
+                      <center>
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Click here to generate routes</button>
+                      </center>
+                  </div>
+              </form>
+       
+       <!--    <div class="past-routes">
             <h6>Today's Route(s)</h6>
             <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
               <tbody>
@@ -165,6 +177,7 @@
         document.getElementById("new-dumpster").classList.toggle("visible");
     }
   </script>
+        -->
 
 </html>
 
