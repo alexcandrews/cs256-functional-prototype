@@ -182,7 +182,7 @@ Trash Talk
             <div id="myDropdown" class="dropdown-content">
               <button onclick="addDumpster()" class="dropdown-button" id="add-dumpster-button">Add Dumpster</button>
               <button onclick="" class="dropdown-button" id="create-routes-button">Generate Routes</button>
-              <button onclick="" class="dropdown-button" id="third-option-button">Third Option</button>
+              <button onclick="" class="dropdown-button" id="third-option-button">Update Drivers</button>
             </div>
           </div>
 
@@ -279,6 +279,16 @@ Trash Talk
             showToastButton.addEventListener('click', function() {
               'use strict';
               var data = {message: 'Routes Generated'};
+              snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            });
+          }());
+          (function() {
+            'use strict';
+            var snackbarContainer = document.querySelector('#demo-toast-example');
+            var showToastButton = document.querySelector('#third-option-button');
+            showToastButton.addEventListener('click', function() {
+              'use strict';
+              var data = {message: 'Drivers Updated'};
               snackbarContainer.MaterialSnackbar.showSnackbar(data);
             });
           }());
