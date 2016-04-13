@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css" />
 <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
 
 
 <link rel="stylesheet" href="../css/style.css">
@@ -68,21 +70,89 @@
         <h4>Route(s) Generated</h4>
       </div>
      <!-- Two Line List with secondary info and action -->
-     <div class="past-routes">
-        <h6>Today's Route(s)</h6>
-       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
-        <tbody>
+    <div class="past-routes" id="past-routes-table">
+      <h6>Today's Route(s)</h6>
+        <div id="todays-routes">
+          <table id="todays-routes-table" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+            <tbody>
+              <tr>
+                <td onclick="testFunction()" class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="to-remove">
+            <table id="route-1-expansion" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Sites</th>
+                  <th class="mdl-data-table__cell--non-numeric">Bin Types</th>
+                  <th>Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">JFSB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">TMCB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">HBLL</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Cardboard</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">JKB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">ESC</td>
+                  <td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">RTD</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Cardboard</td>
+                  <td>13</td>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">ASB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">LSB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">BRMB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Cardboard</td>
+                  <td>13</td>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">MARB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">HRCB</td>
+                  <td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
           <tr>
-            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 11 Items</i></td>
+            <td class="mdl-data-table__cell--non-numeric mdl-list__item routes-table float-left">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
           </tr>
-          <tr id="TEST">
-            <td class="mdl-data-table__cell--non-numeric mdl-list__item">TEST</td>
-          </tr>
-          <tr>
-            <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 2: LSB, ESC, BNSN ... <i> 7 Items</i></td>
-          </tr>
-        </tbody>
-      </table>
+        </table>
+    </div>
       <div class="send-routes-fab">
       <center>
         <button id ="send-routes-fab" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -93,7 +163,9 @@
         </button>
       </center>
       </div>
+      <div class="past-routes">
       <h6>Yesterday's Route(s)</h6>
+      </div>
        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
         <tbody>
           <tr>
@@ -105,7 +177,9 @@
         </tbody>
       </table>
       <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table">
+      <div class="past-routes">
       <h6>This Weeks Route(s)</h6>
+      </div>
       <tbody>
           <tr>
             <td class="mdl-data-table__cell--non-numeric mdl-list__item">Route 1: JFSB, TMCB, HC, JKB ... <i> 8 Items</i></td>
@@ -154,8 +228,16 @@
       }());
       </script>
       <script>
-        function displayRouteItems() {
-          
+        function testFunction() {
+          var parent = document.getElementById("todays-routes");
+          var child = document.getElementById("to-remove");
+          if (child != null) {
+            parent.removeChild(child);
+          } else {
+            var elementToAdd = '<div id="to-remove"><table id="route-1-expansion" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp routes-table"><thead><tr><th class="mdl-data-table__cell--non-numeric">Sites</th><th class="mdl-data-table__cell--non-numeric">Bin Types</th><th>Number</th></tr></thead><tbody><tr><td class="mdl-data-table__cell--non-numeric">JFSB</td><td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td><td>5</td></tr><tr><td class="mdl-data-table__cell--non-numeric">TMCB</td><td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td><td>8</td></tr><tr><td class="mdl-data-table__cell--non-numeric">HBLL</td><td class="mdl-data-table__cell--non-numeric">Paper, Cardboard</td><td>13</td></tr><tr><td class="mdl-data-table__cell--non-numeric">JKB</td><td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td><td>5</td></tr><tr><td class="mdl-data-table__cell--non-numeric">ESC</td><td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td><td>8</td></tr><tr><td class="mdl-data-table__cell--non-numeric">RTD</td><td class="mdl-data-table__cell--non-numeric">Paper, Cardboard</td><td>13</td><tr><td class="mdl-data-table__cell--non-numeric">ASB</td><td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td><td>5</td></tr><tr><td class="mdl-data-table__cell--non-numeric">LSB</td><td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td><td>8</td></tr><tr><td class="mdl-data-table__cell--non-numeric">BRMB</td><td class="mdl-data-table__cell--non-numeric">Paper, Cardboard</td><td>13</td><tr><td class="mdl-data-table__cell--non-numeric">MARB</td><td class="mdl-data-table__cell--non-numeric">Paper, Plastic</td><td>5</td></tr><tr><td class="mdl-data-table__cell--non-numeric">HRCB</td><td class="mdl-data-table__cell--non-numeric">Aluminum, Plastic</td><td>8</td></tr></tbody></table></div>';
+            $(parent).append(elementToAdd);
+          }
+
         }
       </script>
     </div>
