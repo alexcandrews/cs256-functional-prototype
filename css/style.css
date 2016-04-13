@@ -90,6 +90,26 @@
     display: none;
   }
 
+  /* Info window type stuff */
+
+  .iw-title {
+    padding: 10px;
+    background: #FFD740; 
+    width: 250px;
+    margin: 1px;
+    top: 0;
+    left: 0;
+  }
+
+  .iw-contents {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+  }
+
+  .iw-list-item {
+    padding-left: 5px;
+  }
+
 /* This is the styling for the Popups from the FAB */
 
 /* The container <div> - needed to position the dropdown content */
@@ -135,7 +155,7 @@
 }
 
 #third-option-button {
-  padding: 10px 54px 10px 10px;
+  padding: 10px 35px 10px 10px;
 }
 
 .dropdown-button:hover {
@@ -162,4 +182,7 @@
 
 .float-left {
   float: left;
+}
+.logo {
+    text-align: center;
 }
